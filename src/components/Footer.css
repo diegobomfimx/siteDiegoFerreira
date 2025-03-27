@@ -1,0 +1,154 @@
+.contact {
+    padding: 8rem 2rem;
+    background-color: var(--background-alt);
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.contact-description {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    padding: 0 1rem;
+}
+
+.contact-description span {
+    color: var(--text-color);
+    display: inline-block;
+}
+
+.contact-description span:after {
+    content: " / ";
+    color: var(--text-color);
+    margin: 0 0.5rem;
+}
+
+.contact-description span:last-child:after {
+    content: "";
+    margin: 0;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0;
+}
+
+.contact-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+footer {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    letter-spacing: 0;
+    padding: 0.5rem;
+}
+
+.social-icon:hover {
+    color: #666;
+}
+
+.copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 1200px) {
+    .contact {
+        padding: 6rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-description {
+        padding: 0;
+    }
+
+    .contact-button {
+        padding: 0.8rem 2rem;
+    }
+
+    footer {
+        padding: 3rem 1.5rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-description {
+        margin-bottom: 2rem;
+    }
+
+    .contact-description span {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-description span:after {
+        display: none;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+} 

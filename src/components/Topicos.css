@@ -1,0 +1,254 @@
+.topics {
+    padding: 8rem 2rem;
+    background-color: var(--background-color);
+}
+
+.topics h2 {
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 4rem;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.topics-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.swiper {
+    padding: 1rem;
+    margin: -1rem;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.topic-card {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    filter: brightness(0.95);
+    cursor: pointer;
+}
+
+.topic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.topic-card:hover .topic-image img {
+    transform: scale(1.03);
+}
+
+.topic-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+}
+
+.topic-content h3 {
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.topic-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.topic-excerpt {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+}
+
+.topic-link {
+    font-family: 'Gilda Display', serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.topic-link:hover {
+    color: var(--light-blue);
+}
+
+/* Swiper customization */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-color);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    background: var(--text-color);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: 2rem;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.modal-title {
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-family: 'Gilda Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.modal-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+    .topics {
+        padding: 6rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .topics {
+        padding: 4rem 1.5rem;
+    }
+
+    .topics h2 {
+        margin-bottom: 3rem;
+    }
+
+    .topic-content, 
+    .topic-excerpt {
+        max-width: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .modal-content {
+        max-width: 95vw;
+        margin: 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.2rem;
+        top: -2.5rem;
+    }
+
+    .modal-close {
+        font-size: 1.5rem;
+        top: -2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .topics {
+        padding: 3rem 1rem;
+    }
+
+    .topics h2 {
+        margin-bottom: 2rem;
+    }
+
+    .topic-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .topic-content h3 {
+        margin-bottom: 0.8rem;
+    }
+} 

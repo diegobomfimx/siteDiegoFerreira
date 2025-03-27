@@ -1,0 +1,47 @@
+.hero {
+    padding: 120px 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.hero-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-family: 'Gilda Display', serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1.2;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+.hero .italic {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 1.5rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 1rem;
+    }
+} 

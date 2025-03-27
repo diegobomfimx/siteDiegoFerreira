@@ -1,0 +1,207 @@
+.accessibility-widget {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1000;
+}
+
+.accessibility-toggle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.accessibility-toggle svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--background-color);
+}
+
+.accessibility-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accessibility-menu {
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    left: 0;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.accessibility-widget.open .accessibility-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.accessibility-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.accessibility-option:last-child {
+    margin-bottom: 0;
+}
+
+.accessibility-option span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.font-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.font-controls button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-controls button.font-default {
+    background-color: var(--accent-blue);
+    font-weight: 500;
+}
+
+.font-controls button:hover {
+    opacity: 0.9;
+}
+
+.toggle-button {
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #ddd;
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button.active {
+    background-color: var(--text-color);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(1.5rem - 4px);
+    height: calc(1.5rem - 4px);
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button.active .toggle-slider {
+    transform: translateX(1.5rem);
+}
+
+@media (max-width: 768px) {
+    .accessibility-widget {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .accessibility-toggle {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .accessibility-menu {
+        min-width: 220px;
+    }
+}
+
+/* Estilos para modo escuro */
+.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #020202;
+    --light-blue: #64b5f6;
+    --accent-blue: #2196f3;
+    --background-alt: #242424;
+}
+
+.dark-mode .accessibility-toggle {
+    background-color: var(--accent-blue);
+}
+
+.dark-mode .accessibility-toggle svg {
+    color: #ffffff;
+}
+
+.dark-mode .accessibility-menu {
+    background-color: var(--background-alt);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .accessibility-option span {
+    color: #ffffff;
+}
+
+.dark-mode .font-controls button {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+.dark-mode .font-controls button.font-default {
+    background-color: #1976d2;
+    color: #ffffff;
+}
+
+.dark-mode .font-controls button:hover {
+    opacity: 0.9;
+    background-color: #1e88e5;
+}
+
+.dark-mode .toggle-button {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .toggle-button.active {
+    background-color: var(--accent-blue);
+}
+
+.dark-mode .toggle-slider {
+    background-color: #ffffff;
+}
+
+/* Estilos para alto contraste */
+.high-contrast {
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --light-blue: #000000;
+    --accent-blue: #000000;
+    --background-alt: #ffffff;
+} 

@@ -1,0 +1,159 @@
+:root {
+    --font-scale: 1;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --light-blue: #64b5f6;
+    --accent-blue: #2196f3;
+    --max-width: 1200px;
+    --content-width: 90%;
+    
+    /* Breakpoints */
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: calc(var(--font-scale) * 1em);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+p, span, a, button {
+    font-size: calc(var(--font-scale) * 1em);
+}
+
+/* Estilos para modo escuro */
+.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: #111111;
+    --light-blue: #64b5f6;
+    --accent-blue: #2196f3;
+    --card-background: #242424;
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #000000;
+}
+
+.dark-mode a {
+    color: var(--light-blue);
+}
+
+.dark-mode a:hover {
+    color: var(--accent-blue);
+}
+
+.dark-mode .container {
+    background-color: var(--background-color);
+}
+
+.dark-mode .card {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    color: #000000;
+}
+
+.dark-mode .card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.1);
+}
+
+.dark-mode .card img {
+    border-bottom: 1px solid var(--card-border);
+}
+
+.dark-mode .card-content {
+    color: #000000;
+}
+
+.dark-mode .card-content h3 {
+    color: #000000;
+}
+
+.dark-mode .card-content p {
+    color: #000000;
+}
+
+/* Estilos para alto contraste */
+.high-contrast {
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --light-blue: #000000;
+    --accent-blue: #000000;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+} 
