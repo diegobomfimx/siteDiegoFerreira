@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/siteDiegoFerreira/static/css/main.cb9ee35a.css",
+    "main.js": "/siteDiegoFerreira/static/js/main.b92897d3.js",
+    "index.html": "/siteDiegoFerreira/index.html",
+    "main.cb9ee35a.css.map": "/siteDiegoFerreira/static/css/main.cb9ee35a.css.map",
+    "main.b92897d3.js.map": "/siteDiegoFerreira/static/js/main.b92897d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb9ee35a.css",
+    "static/js/main.b92897d3.js"
+  ]
+}
